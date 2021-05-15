@@ -28,3 +28,13 @@ spring:
         uri: lb://PRODUCT-SERVICE/
         predicates:
         - Path=/products/**
+      - id: houseHoldModule
+        uri: lb://HOUSE-HOLD-SERVICE/
+        predicates:
+        - Path=/appliance/**
+      - id: houseHoldClientModule
+        uri: lb://HOUSE-HOLD-CLIENT-SERVICE/
+        predicates:
+        - Path=/client/**
+        
+        
