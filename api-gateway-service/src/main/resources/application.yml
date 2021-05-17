@@ -1,3 +1,9 @@
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 eureka:
   client:
     fetch-registry: true
@@ -7,6 +13,7 @@ eureka:
 server:
   port: 9090
 spring:
+
   boot:
    admin:
     client:
@@ -36,5 +43,11 @@ spring:
         uri: lb://HOUSE-HOLD-CLIENT-SERVICE/
         predicates:
         - Path=/client/**
-        
-        
+      - id: recomendationModule
+        uri: lb://RECOMENDATION-SERVICE/
+        predicates:
+        - Path=/recomendations/**
+      - id: userModule
+        uri: lb://USER-SERVICE/
+        predicates:
+        - Path=/users/**   
