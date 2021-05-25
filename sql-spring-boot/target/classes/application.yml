@@ -1,0 +1,16 @@
+cloud:
+  aws:
+    region:
+      static: ap-southeast-1
+      auto: false
+    stack:
+      auto: false
+    credentials:
+      access-key: AKIATNLFYBINZLMZ64U5
+      secret-key: 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
+    end-point:
+      uri: https://sqs.ap-southeast-1.amazonaws.com/234825976347/myqueue-tNilay
+
+
+server:
+  port: 8083
