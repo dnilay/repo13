@@ -1,0 +1,9 @@
+Copy zookeeper.properties and server.properties from kafka/config to kafka/bin/windows
+
+
+Start Zookeeper
+C:\kafka_2.12-0.10.2.1>.\bin\windows>zookeeper-server-start.bat zookeeper.properties
+Start kafka
+C:\kafka_2.12-0.10.2.1>.\bin\windows>kafka-server-start.bat server.properties
+start console based consumer
+C:\kafka_2.12-0.10.2.1>.\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my_topic --from-beginning
